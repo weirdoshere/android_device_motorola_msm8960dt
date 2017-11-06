@@ -42,3 +42,41 @@ include $(LOCAL_PATH)/product/*.mk
 
 # Vendor product configurations
 $(call inherit-product, vendor/motorola/ghost/-vendor.mk)
+
+# Keylayout
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/keylayout/msp430sensorprocessor.kl:system/usr/keylayout/msp430sensorprocessor.kl
+
+# Lights
+PRODUCT_PACKAGES += \
+    lights.msm8960
+
+# Ramdisk
+PRODUCT_PACKAGES += \
+    init.target.rc
+
+# Thermal
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/thermald-ghost.conf:system/etc/thermald-ghost.conf
+
+# WiFi
+PRODUCT_PACKAGES += \
+    WCNSS_qcom_wlan_nv.bin \
+    WCNSS_qcom_wlan_nv_calibration.bin \
+    WCNSS_qcom_wlan_nv_regulatory.bin \
+    WCNSS_qcom_wlan_nv_calibration_0x3.bin \
+    WCNSS_qcom_wlan_nv_calibration_0x4.bin \
+    WCNSS_qcom_wlan_nv_calibration_0x5.bin \
+    WCNSS_qcom_wlan_nv_calibration_0x6.bin \
+    WCNSS_qcom_wlan_nv_regulatory_0x3.bin \
+    WCNSS_qcom_wlan_nv_regulatory_0x4.bin \
+    WCNSS_qcom_wlan_nv_regulatory_0x5.bin \
+    WCNSS_qcom_wlan_nv_regulatory_0x6.bin
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/wlan/cal_files/WCNSS_qcom_wlan_nv_calibration.bin:system/etc/firmware/wlan/prima/cal_files/WCNSS_qcom_wlan_nv_calibration.bin \
+    $(LOCAL_PATH)/wlan/cal_files/WCNSS_qcom_wlan_nv_calibration_0x1.bin:system/etc/firmware/wlan/prima/cal_files/WCNSS_qcom_wlan_nv_calibration_0x1.bin \
+    $(LOCAL_PATH)/wlan/cal_files/WCNSS_qcom_wlan_nv_calibration_0x2.bin:system/etc/firmware/wlan/prima/cal_files/WCNSS_qcom_wlan_nv_calibration_0x2.bin \
+    $(LOCAL_PATH)/wlan/cal_files/WCNSS_qcom_wlan_nv_regulatory.bin:system/etc/firmware/wlan/prima/cal_files/WCNSS_qcom_wlan_nv_regulatory.bin \
+    $(LOCAL_PATH)/wlan/cal_files/WCNSS_qcom_wlan_nv_regulatory_0x1.bin:system/etc/firmware/wlan/prima/cal_files/WCNSS_qcom_wlan_nv_regulatory_0x1.bin \
+    $(LOCAL_PATH)/wlan/cal_files/WCNSS_qcom_wlan_nv_regulatory_0x2
