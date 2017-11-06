@@ -26,7 +26,7 @@ TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
 # Device identifications
-PRODUCT_DEVICE := Ghost
+PRODUCT_DEVICE := ghost
 PRODUCT_NAME := viper_ghost
 PRODUCT_BRAND := Motorola
 PRODUCT_MANUFACTURER := Motorola
