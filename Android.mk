@@ -16,7 +16,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),huashan)
+ifeq ($(TARGET_DEVICE),ghost)
 
 include $(call first-makefiles-under,$(LOCAL_PATH))
 
