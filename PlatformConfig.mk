@@ -1,5 +1,5 @@
 # Platform
-TARGET_BOARD_PLATFORM := msm8960
+TARGET_BOARD_PLATFORM := msm8960dt
 
 # Architecture
 TARGET_ARCH := arm
