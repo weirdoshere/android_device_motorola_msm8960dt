@@ -19,18 +19,18 @@
 BOARD_AOSP_BASED := true
 
 # Inherit device configurations
-$(call inherit-product, device/sony/huashan/device.mk)
+$(call inherit-product, device/motorola/ghost/device.mk)
 
 # Device display
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
 # Device identifications
-PRODUCT_DEVICE := huashan
-PRODUCT_NAME := aosp_huashan
-PRODUCT_BRAND := Sony
-PRODUCT_MANUFACTURER := Sony
-PRODUCT_MODEL := Xperia SP
+PRODUCT_DEVICE := Ghost
+PRODUCT_NAME := viper_ghost
+PRODUCT_BRAND := Motorola
+PRODUCT_MANUFACTURER := Motorola
+PRODUCT_MODEL := Moto X
 
-# Build fingerprints
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=C5303 BUILD_FINGERPRINT=Sony/C5303/C5303:4.3/12.1.A.1.207/Nvt_nw:user/release-keys PRIVATE_BUILD_DESC="C5303-user 4.3 JB-MR2-VISKAN-140318-1014 227 test-keys"
+
+
